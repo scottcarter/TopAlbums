@@ -1,0 +1,299 @@
+
+{
+  "feed": {
+    "title": "Coming Soon",
+    "id": "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/10/explicit.json",
+    "author": {
+      "name": "iTunes Store",
+      "uri": "http://wwww.apple.com/us/itunes/"
+    },
+    "links": [
+      {
+        "self": "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/10/explicit.json"
+      },
+      {
+        "alternate": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=1396220241&app=music"
+      }
+    ],
+    "copyright": "Copyright © 2018 Apple Inc. All rights reserved.",
+    "country": "us",
+    "icon": "http://itunes.apple.com/favicon.ico",
+    "updated": "2020-07-10T01:48:28.000-07:00",
+    "results": [
+      {
+        "artistName": "Katy Perry",
+        "id": "1522811732",
+        "releaseDate": "2020-08-14",
+        "name": "Smile",
+        "kind": "album",
+        "copyright": "℗ 2020 Capitol Records, LLC",
+        "artistId": "64387566",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/katy-perry/64387566?app=music",
+        "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/a1/09/bc/a109bc6a-21d2-53c5-248a-be19b20ba9da/20UMGIM53351.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "14",
+            "name": "Pop",
+            "url": "https://itunes.apple.com/us/genre/id14"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/smile/1522811732?app=music"
+      },
+      {
+        "artistName": "Tim McGraw",
+        "id": "1521598763",
+        "releaseDate": "2020-08-21",
+        "name": "Here on Earth",
+        "kind": "album",
+        "copyright": "℗ 2020 McGraw Music, LLC under exclusive license to Big Machine Label Group, LLC",
+        "artistId": "3496236",
+        "artistUrl": "https://music.apple.com/us/artist/tim-mcgraw/3496236?app=music",
+        "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/ca/8c/3c/ca8c3cca-2d5b-8854-0d9d-519065cc15a5/20OPBMR01395.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "6",
+            "name": "Country",
+            "url": "https://itunes.apple.com/us/genre/id6"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/here-on-earth/1521598763?app=music"
+      },
+      {
+        "artistName": "Dixie Chicks",
+        "id": "1499733036",
+        "releaseDate": "2020-05-01",
+        "name": "Gaslighter",
+        "kind": "album",
+        "copyright": "℗ 2020 Columbia Records, a Division of Sony Music Entertainment",
+        "artistId": "635633",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/dixie-chicks/635633?app=music",
+        "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/6d/a8/b4/6da8b446-96fc-ce4d-8dd3-97ba5821dac4/886448263777.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "6",
+            "name": "Country",
+            "url": "https://itunes.apple.com/us/genre/id6"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/gaslighter/1499733036?app=music"
+      },
+      {
+        "artistName": "Dominic Fike",
+        "id": "1521345121",
+        "releaseDate": "2020-07-31",
+        "name": "What Could Possibly Go Wrong",
+        "kind": "album",
+        "copyright": "℗ 2020 Sandy Boys, LLC., under exclusive license to Columbia Records, a Division of Sony Music Entertainment",
+        "artistId": "1104179033",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/dominic-fike/1104179033?app=music",
+        "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/a5/2c/6c/a52c6c69-64cb-15a3-a81d-e30e3720f70b/886448586340.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "20",
+            "name": "Alternative",
+            "url": "https://itunes.apple.com/us/genre/id20"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/what-could-possibly-go-wrong/1521345121?app=music"
+      },
+      {
+        "artistName": "Lang Lang",
+        "id": "1519467752",
+        "releaseDate": "2020-09-04",
+        "name": "Bach: Goldberg Variations (Deluxe Edt. Studio + Live)",
+        "kind": "album",
+        "copyright": "℗ 2020 Deutsche Grammophon GmbH, Berlin",
+        "artistId": "5519614",
+        "artistUrl": "https://music.apple.com/us/artist/lang-lang/5519614?app=music",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/86/f3/63/86f3631c-000b-ba3c-64fc-ed5b90404a06/20UMGIM42411.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "5",
+            "name": "Classical",
+            "url": "https://itunes.apple.com/us/genre/id5"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          },
+          {
+            "genreId": "1018",
+            "name": "Baroque Era",
+            "url": "https://itunes.apple.com/us/genre/id1018"
+          },
+          {
+            "genreId": "100010",
+            "name": "Piano",
+            "url": "https://itunes.apple.com/us/genre/id100010"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/bach-goldberg-variations-deluxe-edt-studio-live/1519467752?app=music"
+      },
+      {
+        "artistName": "Ellie Goulding",
+        "id": "1514631992",
+        "releaseDate": "2020-07-17",
+        "name": "Brightest Blue",
+        "kind": "album",
+        "copyright": "A Polydor Records Release; ℗ 2020 Polydor Limited",
+        "artistId": "338264227",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/ellie-goulding/338264227?app=music",
+        "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/9f/28/55/9f28550a-7fe8-c8ef-fc4f-93fd06691ae2/20UMGIM23589.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "14",
+            "name": "Pop",
+            "url": "https://itunes.apple.com/us/genre/id14"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/brightest-blue/1514631992?app=music"
+      },
+      {
+        "artistName": "Luke Bryan",
+        "id": "1497942465",
+        "releaseDate": "2020-04-24",
+        "name": "Born Here Live Here Die Here",
+        "kind": "album",
+        "copyright": "A Capitol Records Nashville Release; ℗ 2020 Row Crop Records, LLC, under exclusive license to UMG Recordings, Inc.",
+        "artistId": "20131064",
+        "artistUrl": "https://music.apple.com/us/artist/luke-bryan/20131064?app=music",
+        "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/b9/70/e2/b970e208-7e7b-9072-e0c2-7aa11d416dbb/20UMGIM08159.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "6",
+            "name": "Country",
+            "url": "https://itunes.apple.com/us/genre/id6"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/born-here-live-here-die-here/1497942465?app=music"
+      },
+      {
+        "artistName": "Yusuf",
+        "id": "1513608539",
+        "releaseDate": "2020-09-18",
+        "name": "Tea for the Tillerman²",
+        "kind": "album",
+        "copyright": "A UMC release; ℗ 2020 Cat-O-Log Records, under exclusive licence to Universal Music Operations Limited",
+        "artistId": "257779222",
+        "artistUrl": "https://music.apple.com/us/artist/yusuf/257779222?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/60/d9/30/60d93007-01cc-628b-6a8e-1ea463feccd2/20UMGIM18115.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "10",
+            "name": "Singer/Songwriter",
+            "url": "https://itunes.apple.com/us/genre/id10"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          },
+          {
+            "genreId": "14",
+            "name": "Pop",
+            "url": "https://itunes.apple.com/us/genre/id14"
+          },
+          {
+            "genreId": "21",
+            "name": "Rock",
+            "url": "https://itunes.apple.com/us/genre/id21"
+          },
+          {
+            "genreId": "1160",
+            "name": "Singer/Songwriter",
+            "url": "https://itunes.apple.com/us/genre/id1160"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/tea-for-the-tillerman/1513608539?app=music"
+      },
+      {
+        "artistName": "Pallbearer",
+        "id": "1518969970",
+        "releaseDate": "2020-10-23",
+        "name": "Forgotten Days",
+        "kind": "album",
+        "copyright": "℗ 2020 Nuclear Blast",
+        "artistId": "499450846",
+        "artistUrl": "https://music.apple.com/us/artist/pallbearer/499450846?app=music",
+        "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/74/e2/94/74e29407-ced4-c4c0-4787-c2dfc00ffcb7/cover.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1153",
+            "name": "Metal",
+            "url": "https://itunes.apple.com/us/genre/id1153"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          },
+          {
+            "genreId": "21",
+            "name": "Rock",
+            "url": "https://itunes.apple.com/us/genre/id21"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/forgotten-days/1518969970?app=music"
+      },
+      {
+        "artistName": "Various Artists",
+        "id": "1517262368",
+        "releaseDate": "2020-09-25",
+        "name": "Blue Note Re:imagined",
+        "kind": "album",
+        "copyright": "A Decca Records Release; ℗ 2020 Universal Music Operations Limited",
+        "artistId": "36270",
+        "artistUrl": "https://music.apple.com/us/artist/various-artists/36270?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/c9/dc/36/c9dc3616-f636-0c4d-5f20-0c5541a5f541/20UMGIM34503.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "11",
+            "name": "Jazz",
+            "url": "https://itunes.apple.com/us/genre/id11"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/blue-note-re-imagined/1517262368?app=music"
+      }
+    ]
+  }
+}
