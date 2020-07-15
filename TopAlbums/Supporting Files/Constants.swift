@@ -24,6 +24,9 @@ enum Constants {
             return URL(string: feed)
         }
 
+        // For testing
+        static var thumbnailURL = URL(string: "https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/a1/09/bc/a109bc6a-21d2-53c5-248a-be19b20ba9da/20UMGIM53351.rgb.jpg/200x200bb.png")
+
     }
 
 }

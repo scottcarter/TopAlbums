@@ -20,6 +20,10 @@
 		A7B89C1824BF5216003FCCFA /* DataTaskMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C1624BF5216003FCCFA /* DataTaskMaker.swift */; };
 		A7B89C1924BF5216003FCCFA /* AlbumClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C1724BF5216003FCCFA /* AlbumClient.swift */; };
 		A7B89C1B24BF524F003FCCFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C1A24BF524F003FCCFA /* Constants.swift */; };
+		A7B89C1E24BF53D0003FCCFA /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C1D24BF53D0003FCCFA /* ImageClient.swift */; };
+		A7B89C2024BF5438003FCCFA /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B89C1F24BF5438003FCCFA /* thumbnail.png */; };
+		A7B89C2224BF546D003FCCFA /* ImageClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2124BF546D003FCCFA /* ImageClientTests.swift */; };
+		A7B89C2424BF548D003FCCFA /* StubImageDataTaskMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2324BF548D003FCCFA /* StubImageDataTaskMaker.swift */; };
 		A7B985FD24BF464E00439A9A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */; };
 		A7B9860224BF47CD00439A9A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FE24BF47CD00439A9A /* Album.swift */; };
 		A7B9860324BF47CD00439A9A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FF24BF47CD00439A9A /* Feed.swift */; };
@@ -64,6 +68,10 @@
 		A7B89C1624BF5216003FCCFA /* DataTaskMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTaskMaker.swift; sourceTree = "<group>"; };
 		A7B89C1724BF5216003FCCFA /* AlbumClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumClient.swift; sourceTree = "<group>"; };
 		A7B89C1A24BF524F003FCCFA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7B89C1D24BF53D0003FCCFA /* ImageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
+		A7B89C1F24BF5438003FCCFA /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		A7B89C2124BF546D003FCCFA /* ImageClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClientTests.swift; sourceTree = "<group>"; };
+		A7B89C2324BF548D003FCCFA /* StubImageDataTaskMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubImageDataTaskMaker.swift; sourceTree = "<group>"; };
 		A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		A7B985FE24BF47CD00439A9A /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A7B985FF24BF47CD00439A9A /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
@@ -134,8 +142,10 @@
 			children = (
 				A7B89C1C24BF5315003FCCFA /* Resources */,
 				A7B89C0C24BF5168003FCCFA /* AlbumClientTests.swift */,
+				A7B89C2124BF546D003FCCFA /* ImageClientTests.swift */,
 				A7B89C1024BF51A3003FCCFA /* InvalidAlbumFeed.swift */,
 				A7B89C1124BF51A3003FCCFA /* StubAlbumDataTaskMaker.swift */,
+				A7B89C2324BF548D003FCCFA /* StubImageDataTaskMaker.swift */,
 				A7B89C1224BF51A3003FCCFA /* StubDataTaskMaker.swift */,
 			);
 			path = TopAlbumsTests;
@@ -154,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B89C0E24BF5178003FCCFA /* albumFeed.json */,
+				A7B89C1F24BF5438003FCCFA /* thumbnail.png */,
 				A782A1C524BF3F5E008CC1FA /* Info.plist */,
 			);
 			name = Resources;
@@ -163,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B89C1724BF5216003FCCFA /* AlbumClient.swift */,
+				A7B89C1D24BF53D0003FCCFA /* ImageClient.swift */,
 				A7B89C1624BF5216003FCCFA /* DataTaskMaker.swift */,
 			);
 			path = Networking;
@@ -327,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B89C2024BF5438003FCCFA /* thumbnail.png in Resources */,
 				A7B89C0F24BF5178003FCCFA /* albumFeed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A782A1AD24BF3F5D008CC1FA /* AppDelegate.swift in Sources */,
+				A7B89C1E24BF53D0003FCCFA /* ImageClient.swift in Sources */,
 				A7B9860424BF47CD00439A9A /* AlbumFeed.swift in Sources */,
 				A7B9860324BF47CD00439A9A /* Feed.swift in Sources */,
 				A7B89C1824BF5216003FCCFA /* DataTaskMaker.swift in Sources */,
@@ -362,10 +376,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B89C2224BF546D003FCCFA /* ImageClientTests.swift in Sources */,
 				A7B89C1524BF51A3003FCCFA /* StubDataTaskMaker.swift in Sources */,
 				A7B89C0D24BF5168003FCCFA /* AlbumClientTests.swift in Sources */,
 				A7B89C1324BF51A3003FCCFA /* InvalidAlbumFeed.swift in Sources */,
 				A7B89C1424BF51A3003FCCFA /* StubAlbumDataTaskMaker.swift in Sources */,
+				A7B89C2424BF548D003FCCFA /* StubImageDataTaskMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
