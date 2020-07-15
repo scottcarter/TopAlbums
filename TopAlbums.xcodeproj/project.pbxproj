@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A782A1A924BF3F5D008CC1FA /* Top Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Albums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A782A1A924BF3F5D008CC1FA /* TopAlbums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopAlbums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A782A1AC24BF3F5D008CC1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A782A1AE24BF3F5D008CC1FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A782A1B524BF3F5E008CC1FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		A782A1AA24BF3F5D008CC1FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A782A1A924BF3F5D008CC1FA /* Top Albums.app */,
+				A782A1A924BF3F5D008CC1FA /* TopAlbums.app */,
 				A782A1BF24BF3F5E008CC1FA /* TopAlbumsTests.xctest */,
 				A782A1CA24BF3F5E008CC1FA /* TopAlbumsUITests.xctest */,
 			);
@@ -202,7 +202,7 @@
 			);
 			name = TopAlbums;
 			productName = TopAlbums;
-			productReference = A782A1A924BF3F5D008CC1FA /* Top Albums.app */;
+			productReference = A782A1A924BF3F5D008CC1FA /* TopAlbums.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A782A1BE24BF3F5E008CC1FA /* TopAlbumsTests */ = {
@@ -494,7 +494,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.scott.TopAlbums;
-				PRODUCT_NAME = "Top Albums";
+				PRODUCT_NAME = TopAlbums;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -512,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.scott.TopAlbums;
-				PRODUCT_NAME = "Top Albums";
+				PRODUCT_NAME = TopAlbums;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
