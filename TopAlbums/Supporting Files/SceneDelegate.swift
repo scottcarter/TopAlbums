@@ -20,7 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 
+            let albumsViewModel = AlbumsViewModel()
+
             let albumsViewController = AlbumsViewController()
+            albumsViewController.albumsViewModel = albumsViewModel
+
             let navigationController = UINavigationController(rootViewController: albumsViewController)
 
             window.rootViewController = navigationController

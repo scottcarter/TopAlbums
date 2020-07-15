@@ -10,21 +10,85 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        // MARK: - Constants
 
-        // Do any additional setup after loading the view.
+        let cellReuseIdentifier = "AlbumCell"
+        let tableView = UITableView()
+
+        // MARK: - Variable Properties
+
+        var albumsViewModel: AlbumsViewModel?
+
+        // MARK: - Lifecycle
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationItem.title = "Top Albums"
+
+            loadViews()
+
+            albumsViewModel?.loadAlbums { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+
+        override func viewWillLayoutSubviews() {
+            super.viewWillLayoutSubviews()
+
+            tableView.frame = view.bounds // FIXME - constraints to safe area layout guide needed
+        }
+
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private extension AlbumsViewController {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        func loadViews() {
+            tableView.register(AlbumTableViewCell.classForCoder(), forCellReuseIdentifier: cellReuseIdentifier)
+            tableView.delegate = self
+            tableView.dataSource = self
+
+            tableView.estimatedRowHeight = Constants.AlbumsTable.rowHeight
+
+            view.addSubview(tableView)
+        }
+
     }
-    */
 
-}
+    // MARK: UITableViewDelegate
+    extension AlbumsViewController: UITableViewDelegate {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell =
+                tableView.dequeueReusableCell(
+                    withIdentifier: cellReuseIdentifier,
+                    for: indexPath
+                    ) as? AlbumTableViewCell else {
+                        assertionFailure("Can't dequeue AlbumTableViewCell")
+                        return AlbumTableViewCell()
+            }
+
+            albumsViewModel?.configure(cell, for: indexPath)
+
+            return cell
+        }
+
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return Constants.AlbumsTable.rowHeight
+        }
+
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        }
+    }
+
+    // MARK: UITableViewDataSource
+    extension AlbumsViewController: UITableViewDataSource {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return albumsViewModel?.albumCount ?? 0
+        }
+
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+    }
+
