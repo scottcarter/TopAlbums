@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		A782A1AD24BF3F5D008CC1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782A1AC24BF3F5D008CC1FA /* AppDelegate.swift */; };
 		A782A1AF24BF3F5D008CC1FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782A1AE24BF3F5D008CC1FA /* SceneDelegate.swift */; };
-		A782A1B124BF3F5D008CC1FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782A1B024BF3F5D008CC1FA /* ViewController.swift */; };
-		A782A1B424BF3F5D008CC1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A782A1B224BF3F5D008CC1FA /* Main.storyboard */; };
 		A782A1B624BF3F5E008CC1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A782A1B524BF3F5E008CC1FA /* Assets.xcassets */; };
 		A782A1B924BF3F5E008CC1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A782A1B724BF3F5E008CC1FA /* LaunchScreen.storyboard */; };
 		A782A1C424BF3F5E008CC1FA /* TopAlbumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782A1C324BF3F5E008CC1FA /* TopAlbumsTests.swift */; };
 		A782A1CF24BF3F5E008CC1FA /* TopAlbumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782A1CE24BF3F5E008CC1FA /* TopAlbumsUITests.swift */; };
+		A7B985FD24BF464E00439A9A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A782A1A924BF3F5D008CC1FA /* TopAlbums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopAlbums.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A782A1A924BF3F5D008CC1FA /* Top Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Albums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A782A1AC24BF3F5D008CC1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A782A1AE24BF3F5D008CC1FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A782A1B024BF3F5D008CC1FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A782A1B324BF3F5D008CC1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A782A1B524BF3F5E008CC1FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A782A1B824BF3F5E008CC1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A782A1BA24BF3F5E008CC1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		A782A1CA24BF3F5E008CC1FA /* TopAlbumsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopAlbumsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A782A1CE24BF3F5E008CC1FA /* TopAlbumsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsUITests.swift; sourceTree = "<group>"; };
 		A782A1D024BF3F5E008CC1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +87,7 @@
 		A782A1AA24BF3F5D008CC1FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A782A1A924BF3F5D008CC1FA /* TopAlbums.app */,
+				A782A1A924BF3F5D008CC1FA /* Top Albums.app */,
 				A782A1BF24BF3F5E008CC1FA /* TopAlbumsTests.xctest */,
 				A782A1CA24BF3F5E008CC1FA /* TopAlbumsUITests.xctest */,
 			);
@@ -99,13 +97,12 @@
 		A782A1AB24BF3F5D008CC1FA /* TopAlbums */ = {
 			isa = PBXGroup;
 			children = (
-				A782A1AC24BF3F5D008CC1FA /* AppDelegate.swift */,
-				A782A1AE24BF3F5D008CC1FA /* SceneDelegate.swift */,
-				A782A1B024BF3F5D008CC1FA /* ViewController.swift */,
-				A782A1B224BF3F5D008CC1FA /* Main.storyboard */,
-				A782A1B524BF3F5E008CC1FA /* Assets.xcassets */,
-				A782A1B724BF3F5E008CC1FA /* LaunchScreen.storyboard */,
-				A782A1BA24BF3F5E008CC1FA /* Info.plist */,
+				A7B985F624BF44F000439A9A /* Networking */,
+				A7B985F724BF44FD00439A9A /* Views */,
+				A7B985F824BF450400439A9A /* View Models */,
+				A7B985F924BF450E00439A9A /* Models */,
+				A7B985FB24BF455100439A9A /* Resources */,
+				A7B985FA24BF454300439A9A /* Supporting Files */,
 			);
 			path = TopAlbums;
 			sourceTree = "<group>";
@@ -128,6 +125,54 @@
 			path = TopAlbumsUITests;
 			sourceTree = "<group>";
 		};
+		A7B985F624BF44F000439A9A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A7B985F724BF44FD00439A9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7B985F824BF450400439A9A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A7B985F924BF450E00439A9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7B985FA24BF454300439A9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A782A1AC24BF3F5D008CC1FA /* AppDelegate.swift */,
+				A782A1AE24BF3F5D008CC1FA /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7B985FB24BF455100439A9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A782A1B524BF3F5E008CC1FA /* Assets.xcassets */,
+				A782A1B724BF3F5E008CC1FA /* LaunchScreen.storyboard */,
+				A782A1BA24BF3F5E008CC1FA /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,7 +190,7 @@
 			);
 			name = TopAlbums;
 			productName = TopAlbums;
-			productReference = A782A1A924BF3F5D008CC1FA /* TopAlbums.app */;
+			productReference = A782A1A924BF3F5D008CC1FA /* Top Albums.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A782A1BE24BF3F5E008CC1FA /* TopAlbumsTests */ = {
@@ -234,7 +279,6 @@
 			files = (
 				A782A1B924BF3F5E008CC1FA /* LaunchScreen.storyboard in Resources */,
 				A782A1B624BF3F5E008CC1FA /* Assets.xcassets in Resources */,
-				A782A1B424BF3F5D008CC1FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A782A1B124BF3F5D008CC1FA /* ViewController.swift in Sources */,
 				A782A1AD24BF3F5D008CC1FA /* AppDelegate.swift in Sources */,
 				A782A1AF24BF3F5D008CC1FA /* SceneDelegate.swift in Sources */,
+				A7B985FD24BF464E00439A9A /* AlbumsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A782A1B224BF3F5D008CC1FA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A782A1B324BF3F5D008CC1FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A782A1B724BF3F5E008CC1FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.scott.TopAlbums;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Top Albums";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.scott.TopAlbums;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Top Albums";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
