@@ -26,6 +26,9 @@
 		A7B89C2424BF548D003FCCFA /* StubImageDataTaskMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2324BF548D003FCCFA /* StubImageDataTaskMaker.swift */; };
 		A7B89C2624BF55BA003FCCFA /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2524BF55B9003FCCFA /* AlbumsViewModel.swift */; };
 		A7B89C2824BF55EC003FCCFA /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2724BF55EC003FCCFA /* AlbumTableViewCell.swift */; };
+		A7B89C2B24BF57DE003FCCFA /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2924BF57DE003FCCFA /* AlbumView.swift */; };
+		A7B89C2C24BF57DE003FCCFA /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2A24BF57DE003FCCFA /* AlbumViewController.swift */; };
+		A7B89C2E24BF5831003FCCFA /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2D24BF5831003FCCFA /* AlbumViewModel.swift */; };
 		A7B985FD24BF464E00439A9A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */; };
 		A7B9860224BF47CD00439A9A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FE24BF47CD00439A9A /* Album.swift */; };
 		A7B9860324BF47CD00439A9A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FF24BF47CD00439A9A /* Feed.swift */; };
@@ -76,6 +79,9 @@
 		A7B89C2324BF548D003FCCFA /* StubImageDataTaskMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubImageDataTaskMaker.swift; sourceTree = "<group>"; };
 		A7B89C2524BF55B9003FCCFA /* AlbumsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 		A7B89C2724BF55EC003FCCFA /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		A7B89C2924BF57DE003FCCFA /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		A7B89C2A24BF57DE003FCCFA /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		A7B89C2D24BF5831003FCCFA /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		A7B985FE24BF47CD00439A9A /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A7B985FF24BF47CD00439A9A /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
@@ -144,13 +150,13 @@
 		A782A1C224BF3F5E008CC1FA /* TopAlbumsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7B89C1C24BF5315003FCCFA /* Resources */,
 				A7B89C0C24BF5168003FCCFA /* AlbumClientTests.swift */,
 				A7B89C2124BF546D003FCCFA /* ImageClientTests.swift */,
 				A7B89C1024BF51A3003FCCFA /* InvalidAlbumFeed.swift */,
+				A7B89C1224BF51A3003FCCFA /* StubDataTaskMaker.swift */,
 				A7B89C1124BF51A3003FCCFA /* StubAlbumDataTaskMaker.swift */,
 				A7B89C2324BF548D003FCCFA /* StubImageDataTaskMaker.swift */,
-				A7B89C1224BF51A3003FCCFA /* StubDataTaskMaker.swift */,
+				A7B89C1C24BF5315003FCCFA /* Resources */,
 			);
 			path = TopAlbumsTests;
 			sourceTree = "<group>";
@@ -167,9 +173,9 @@
 		A7B89C1C24BF5315003FCCFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A7B89C0E24BF5178003FCCFA /* albumFeed.json */,
-				A7B89C1F24BF5438003FCCFA /* thumbnail.png */,
 				A782A1C524BF3F5E008CC1FA /* Info.plist */,
+				A7B89C1F24BF5438003FCCFA /* thumbnail.png */,
+				A7B89C0E24BF5178003FCCFA /* albumFeed.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 			children = (
 				A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */,
 				A7B89C2724BF55EC003FCCFA /* AlbumTableViewCell.swift */,
+				A7B89C2A24BF57DE003FCCFA /* AlbumViewController.swift */,
+				A7B89C2924BF57DE003FCCFA /* AlbumView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B89C2524BF55B9003FCCFA /* AlbumsViewModel.swift */,
+				A7B89C2D24BF5831003FCCFA /* AlbumViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -204,10 +213,10 @@
 		A7B985F924BF450E00439A9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A7B985FE24BF47CD00439A9A /* Album.swift */,
-				A7B9860024BF47CD00439A9A /* AlbumFeed.swift */,
 				A7B985FF24BF47CD00439A9A /* Feed.swift */,
 				A7B9860124BF47CD00439A9A /* Genre.swift */,
+				A7B985FE24BF47CD00439A9A /* Album.swift */,
+				A7B9860024BF47CD00439A9A /* AlbumFeed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,9 +224,9 @@
 		A7B985FA24BF454300439A9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7B89C1A24BF524F003FCCFA /* Constants.swift */,
 				A782A1AC24BF3F5D008CC1FA /* AppDelegate.swift */,
 				A782A1AE24BF3F5D008CC1FA /* SceneDelegate.swift */,
+				A7B89C1A24BF524F003FCCFA /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 				A782A1A524BF3F5D008CC1FA /* Sources */,
 				A782A1A624BF3F5D008CC1FA /* Frameworks */,
 				A782A1A724BF3F5D008CC1FA /* Resources */,
+				A7B89C2F24BF5998003FCCFA /* Issue Generation */,
 			);
 			buildRules = (
 			);
@@ -359,6 +369,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A7B89C2F24BF5998003FCCFA /* Issue Generation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Issue Generation";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# https://littlebitesofcocoa.com/207-annotating-swift-with-marks-todo-s-and-fixme-s\n#\nKEYWORDS=\"INFO|TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\n\nfind \"${SRCROOT}\" \\( -name \"*.swift\" -not -regex \".*/Pods/.*\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"//\\s*($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/\\/\\/\\s*($KEYWORDS)/ warning: \\$1/\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A782A1A524BF3F5D008CC1FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -370,10 +401,13 @@
 				A7B9860324BF47CD00439A9A /* Feed.swift in Sources */,
 				A7B89C1824BF5216003FCCFA /* DataTaskMaker.swift in Sources */,
 				A782A1AF24BF3F5D008CC1FA /* SceneDelegate.swift in Sources */,
+				A7B89C2C24BF57DE003FCCFA /* AlbumViewController.swift in Sources */,
 				A7B89C1B24BF524F003FCCFA /* Constants.swift in Sources */,
 				A7B89C1924BF5216003FCCFA /* AlbumClient.swift in Sources */,
 				A7B89C2624BF55BA003FCCFA /* AlbumsViewModel.swift in Sources */,
 				A7B985FD24BF464E00439A9A /* AlbumsViewController.swift in Sources */,
+				A7B89C2B24BF57DE003FCCFA /* AlbumView.swift in Sources */,
+				A7B89C2E24BF5831003FCCFA /* AlbumViewModel.swift in Sources */,
 				A7B89C2824BF55EC003FCCFA /* AlbumTableViewCell.swift in Sources */,
 				A7B9860224BF47CD00439A9A /* Album.swift in Sources */,
 				A7B9860524BF47CD00439A9A /* Genre.swift in Sources */,

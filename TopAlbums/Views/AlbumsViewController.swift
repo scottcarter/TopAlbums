@@ -78,6 +78,9 @@ class AlbumsViewController: UIViewController {
         }
 
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let albumViewController = AlbumViewController()
+            albumViewController.album = albumsViewModel?.album(for: indexPath)
+            navigationController?.pushViewController(albumViewController, animated: true)
         }
     }
 

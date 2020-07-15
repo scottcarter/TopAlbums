@@ -29,6 +29,10 @@ enum Constants {
 
     }
 
+    enum Album {
+        static let albumArtHeight: CGFloat = 200.0 // The size of original
+    }
+
     enum AlbumsTable {
         static let rowHeight: CGFloat = 100.0
         static let albumArtHeight: CGFloat = 90.0 // To allow for row separation
