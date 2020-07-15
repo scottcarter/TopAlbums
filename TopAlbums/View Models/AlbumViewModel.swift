@@ -11,9 +11,19 @@ import UIKit
 
 class AlbumViewModel {
 
+     // MARK: - Variable Properties
+
+    let album: Album?
+
+    // MARK: - Initializers
+
+    init(album: Album?) {
+        self.album = album
+    }
+
     // MARK: - Functions
 
-    func configure(_ view: AlbumView, using album: Album?) {
+    func configure(_ view: AlbumView) {
 
         guard let album = album else {
             return
@@ -33,17 +43,15 @@ class AlbumViewModel {
         }
         view.genre.font = UIFont.systemFont(ofSize: 14.0)
 
-        // FIXME - format date
-        view.releaseDate.text = album.releaseDate
-        view.releaseDate.font = UIFont.systemFont(ofSize: 14.0)
+        configureReleaseDate(view, using: album)
 
-        view.copyright.text = album.copyright
-        view.copyright.font = UIFont.systemFont(ofSize: 14.0)
-
+        // Copyright
         // We need a reasonable limit on number of lines for copyright to avoid
         // overlap with bottom button on small devices.  There are alternatives
         // such as allowing the font to scale.
         view.copyright.numberOfLines = 4
+        view.copyright.text = album.copyright
+        view.copyright.font = UIFont.systemFont(ofSize: 14.0)
 
         guard let artworkURL = URL(string: album.artworkURL) else {
             return
@@ -62,8 +70,34 @@ class AlbumViewModel {
         view.storeButton.addTarget(self, action: #selector(storeButtonAction(sender:)), for: .touchUpInside)
     }
 
+}
+
+private extension AlbumViewModel {
+
+    // Format the release date presentation
+    func configureReleaseDate(_ view: AlbumView, using album: Album) {
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.locale = .current
+
+        if let date = formatter.date(from: album.releaseDate) {
+            formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MMMM d YYYY", options: 0, locale: .current)
+            let releaseDate = formatter.string(from: date)
+            view.releaseDate.text = releaseDate
+        } else {
+            view.releaseDate.text = album.releaseDate
+        }
+
+        view.releaseDate.font = UIFont.systemFont(ofSize: 14.0)
+    }
+
     @objc func storeButtonAction(sender: AnyObject) {
-        print("Clicked") // FIXME itunes button
+        if let albumURL = album?.albumURL,
+            let url = URL(string: albumURL),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 
 }

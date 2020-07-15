@@ -23,7 +23,6 @@ class AlbumView: UIView {
 
     // MARK: - Variable Properties
 
-    var album: Album?
     var albumViewModel: AlbumViewModel?
     var viewIsConfigured = false
 
@@ -37,53 +36,13 @@ class AlbumView: UIView {
 
             self.backgroundColor = .systemBackground
             addSubviews()
-            albumViewModel?.configure(self, using: album)
+            albumViewModel?.configure(self)
         }
     }
 
 }
 
 private extension AlbumView {
-
-    func constrainStoreButton() {
-
-        storeButton.leadingAnchor.constraint(
-            equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-            constant: 20.0
-        ).isActive = true
-
-        storeButton.bottomAnchor.constraint(
-            equalTo: self.safeAreaLayoutGuide.bottomAnchor,
-            constant: -20.0
-        ).isActive = true
-
-        storeButton.trailingAnchor.constraint(
-            equalTo: self.safeAreaLayoutGuide.trailingAnchor,
-            constant: -20.0
-        ).isActive = true
-
-        storeButton.centerXAnchor.constraint(
-            equalTo: self.safeAreaLayoutGuide.centerXAnchor
-        ).isActive = true
-    }
-
-    func constrainMainStackView(_ mainStackView: UIStackView) {
-
-        mainStackView.leadingAnchor.constraint(
-            equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-            constant: 40.0
-        ).isActive = true
-
-        mainStackView.topAnchor.constraint(
-            equalTo: self.safeAreaLayoutGuide.topAnchor,
-            constant: 10.0
-        ).isActive = true
-
-        mainStackView.trailingAnchor.constraint(
-            equalTo: self.safeAreaLayoutGuide.trailingAnchor,
-            constant: -40.0
-        ).isActive = true
-    }
 
     func addSubviews() {
         // Fill the available space and clip as needed
@@ -123,4 +82,43 @@ private extension AlbumView {
         constrainStoreButton()
     }
 
+    func constrainMainStackView(_ mainStackView: UIStackView) {
+
+        mainStackView.leadingAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+            constant: 40.0
+        ).isActive = true
+
+        mainStackView.topAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.topAnchor,
+            constant: 10.0
+        ).isActive = true
+
+        mainStackView.trailingAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+            constant: -40.0
+        ).isActive = true
+    }
+
+    func constrainStoreButton() {
+
+        storeButton.leadingAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+            constant: 20.0
+        ).isActive = true
+
+        storeButton.bottomAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.bottomAnchor,
+            constant: -20.0
+        ).isActive = true
+
+        storeButton.trailingAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+            constant: -20.0
+        ).isActive = true
+
+        storeButton.centerXAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.centerXAnchor
+        ).isActive = true
+    }
 }

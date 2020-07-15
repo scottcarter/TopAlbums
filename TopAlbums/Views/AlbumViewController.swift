@@ -10,27 +10,16 @@ import UIKit
 
 class AlbumViewController: UIViewController {
 
-    // MARK: - Structs
-
-    // MARK: - Enumerations
-
-    // MARK: - Typealiases
-
-    // MARK: - Constants
-
     // MARK: - Variable Properties
 
     var album: Album?
-
-    // MARK: - Interface Builder Outlets
 
     // MARK: - Lifecycle
 
     override func loadView() {
         let albumView = AlbumView()
-        albumView.album = album
+        let albumViewModel = AlbumViewModel(album: album)
 
-        let albumViewModel = AlbumViewModel()
         albumView.albumViewModel = albumViewModel
 
         view = albumView
@@ -41,13 +30,5 @@ class AlbumViewController: UIViewController {
 
         navigationItem.largeTitleDisplayMode = .never
     }
-
-    // MARK: - Initializers
-
-    // MARK: - IBActions
-
-    // MARK: - Functions
-
-    // MARK: - Computed Properties
 
 }
