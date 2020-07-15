@@ -67,7 +67,16 @@ class AlbumViewModel {
         // Store button
         view.storeButton.setTitle("Visit in iTunes Store", for: .normal)
         view.storeButton.setTitleColor(.systemBlue, for: .normal)
+
+        updateStoreButtonBorder(view)
+
+        view.storeButton.layer.borderWidth = 1.0
+        view.storeButton.layer.cornerRadius = 5.0
         view.storeButton.addTarget(self, action: #selector(storeButtonAction(sender:)), for: .touchUpInside)
+    }
+
+    func updateStoreButtonBorder(_ view: AlbumView) {
+        view.storeButton.layer.borderColor = Constants.Album.buttonBorderColor.cgColor
     }
 
 }

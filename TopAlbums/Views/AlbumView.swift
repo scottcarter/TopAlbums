@@ -40,6 +40,15 @@ class AlbumView: UIView {
         }
     }
 
+    // Respond to trait collection changes
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            albumViewModel?.updateStoreButtonBorder(self)
+        }
+    }
+
 }
 
 private extension AlbumView {

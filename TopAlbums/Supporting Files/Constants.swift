@@ -31,6 +31,15 @@ enum Constants {
 
     enum Album {
         static let albumArtHeight: CGFloat = 200.0 // The size of original
+
+        // Dark mode support for store button border color variation.
+        static let buttonBorderColor = UIColor {(traitCollection: UITraitCollection) -> UIColor in
+            if traitCollection.userInterfaceStyle == .dark {
+                return UIColor.white
+            } else {
+                return UIColor.black
+            }
+        }
     }
 
     enum AlbumsTable {
