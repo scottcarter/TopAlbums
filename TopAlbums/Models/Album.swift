@@ -16,7 +16,7 @@ struct Album: Codable {
     let name: String
     let releaseDate: String
     let albumURL: String
-    
+
     enum CodingKeys: String, CodingKey {
         case artistName
         case artworkURL = "artworkUrl100"

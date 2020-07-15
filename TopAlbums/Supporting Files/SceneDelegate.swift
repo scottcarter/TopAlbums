@@ -2,13 +2,14 @@
 //  SceneDelegate.swift
 //  TopAlbums
 //
-//  Created by Scott Carter on 7/15/20.
+//  Created by Scott Carter on 7/13/20.
 //  Copyright © 2020 Scott Carter. All rights reserved.
 //
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
     var window: UIWindow?
 
     func scene(
@@ -32,5 +33,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
     }
-}
 
+}
