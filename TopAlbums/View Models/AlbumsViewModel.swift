@@ -21,8 +21,25 @@ class AlbumsViewModel {
         albums[indexPath.row]
     }
 
-    func configure(_ cell: AlbumTableViewCell, for indexPath: IndexPath) {
-        cell.album = albums[indexPath.row]
+    func configure(_ cell: AlbumsTableViewCell, for indexPath: IndexPath) {
+        let album = albums[indexPath.row]
+
+        cell.albumName.text = album.name
+        cell.albumName.font = UIFont.systemFont(ofSize: 20.0)
+
+        cell.artistName.text = album.artistName
+        cell.artistName.font = UIFont.systemFont(ofSize: 14.0)
+
+        guard let thumbnailURL = URL(string: album.artworkURL) else {
+            return
+        }
+
+        ImageClient.shared.setImage(
+            on: cell.albumArt,
+            fromURL: thumbnailURL,
+            withPlaceholder: UIImage(systemName: "photo"),
+            completion: { _, _  in }
+        )
      }
 
     func loadAlbums(completion: @escaping () -> Void) {

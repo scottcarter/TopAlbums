@@ -27,6 +27,10 @@ class AlbumsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Top Albums"
 
+        // Need this since we constrain table view to safe area on bottom
+        // and this color will display.
+        view.backgroundColor = .systemBackground
+
         loadViews()
 
         albumsViewModel?.loadAlbums { [weak self] in
@@ -34,24 +38,47 @@ class AlbumsViewController: UIViewController {
         }
     }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-
-        tableView.frame = view.bounds // FIXME - constraints to safe area layout guide needed
-    }
-
 }
 
 private extension AlbumsViewController {
 
     func loadViews() {
-        tableView.register(AlbumTableViewCell.classForCoder(), forCellReuseIdentifier: cellReuseIdentifier)
+        tableView.register(AlbumsTableViewCell.classForCoder(), forCellReuseIdentifier: cellReuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
 
         tableView.estimatedRowHeight = Constants.AlbumsTable.rowHeight
 
         view.addSubview(tableView)
+
+        addTableViewContraints()
+    }
+
+    func addTableViewContraints() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+
+        tableView.leadingAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+            constant: 0.0
+        ).isActive = true
+
+        tableView.bottomAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+            constant: 0.0
+        ).isActive = true
+
+        tableView.trailingAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+            constant: 0.0
+        ).isActive = true
+
+        // We will allow scroll behind navigation bar - not
+        // constraining to safe area.
+        tableView.topAnchor.constraint(
+            equalTo: view.topAnchor,
+            constant: 0.0
+        ).isActive = true
+
     }
 
 }
@@ -63,9 +90,9 @@ extension AlbumsViewController: UITableViewDelegate {
             tableView.dequeueReusableCell(
                 withIdentifier: cellReuseIdentifier,
                 for: indexPath
-                ) as? AlbumTableViewCell else {
+                ) as? AlbumsTableViewCell else {
                     assertionFailure("Can't dequeue AlbumTableViewCell")
-                    return AlbumTableViewCell()
+                    return AlbumsTableViewCell()
         }
 
         albumsViewModel?.configure(cell, for: indexPath)

@@ -8,21 +8,13 @@
 
 import UIKit
 
-class AlbumTableViewCell: UITableViewCell {
+class AlbumsTableViewCell: UITableViewCell {
 
     // MARK: - Constants
 
     let albumArt = UIImageView()
     let albumName = UILabel()
     let artistName = UILabel()
-
-    // MARK: - Variable Properties
-
-    var album: Album? = nil {
-      didSet {
-        configureCell()
-      }
-    }
 
     // MARK: - Lifecycle
 
@@ -45,7 +37,7 @@ class AlbumTableViewCell: UITableViewCell {
 
 }
 
-private extension AlbumTableViewCell {
+private extension AlbumsTableViewCell {
 
     func addSubviews() {
         // Fill the available space and clip as needed
@@ -98,28 +90,4 @@ private extension AlbumTableViewCell {
 
     }
 
-    // FIXME - move to view model
-    func configureCell() {
-
-        guard let album = album else {
-            return
-        }
-
-        albumName.text = album.name
-        albumName.font = UIFont.systemFont(ofSize: 20.0)
-
-        artistName.text = album.artistName
-        artistName.font = UIFont.systemFont(ofSize: 14.0)
-
-        guard let thumbnailURL = URL(string: album.artworkURL) else {
-            return
-        }
-
-        ImageClient.shared.setImage(
-            on: albumArt,
-            fromURL: thumbnailURL,
-            withPlaceholder: UIImage(systemName: "photo"),
-            completion: { _, _  in }
-        )
-    }
 }

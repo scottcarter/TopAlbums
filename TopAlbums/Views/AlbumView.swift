@@ -71,10 +71,6 @@ private extension AlbumView {
         self.addSubview(storeButton)
 
         // Add constraints
-
-        mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        storeButton.translatesAutoresizingMaskIntoConstraints = false
-
         albumArt.heightAnchor.constraint(equalToConstant: Constants.Album.albumArtHeight).isActive = true
         albumArt.widthAnchor.constraint(equalTo: albumArt.heightAnchor).isActive = true
 
@@ -83,6 +79,7 @@ private extension AlbumView {
     }
 
     func constrainMainStackView(_ mainStackView: UIStackView) {
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
 
         mainStackView.leadingAnchor.constraint(
             equalTo: self.safeAreaLayoutGuide.leadingAnchor,
@@ -101,6 +98,7 @@ private extension AlbumView {
     }
 
     func constrainStoreButton() {
+        storeButton.translatesAutoresizingMaskIntoConstraints = false
 
         storeButton.leadingAnchor.constraint(
             equalTo: self.safeAreaLayoutGuide.leadingAnchor,
