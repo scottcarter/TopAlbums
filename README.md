@@ -1,5 +1,8 @@
-# Overview
+# About
 This project was developed as a result of a code exercise.
+
+<img src="https://github.com/scottcarter/TopAlbums/blob/master/TopAlbums_1.gif" width="317" height="600" />V
+
 
 # Requirements
 
