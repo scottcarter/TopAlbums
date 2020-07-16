@@ -33,7 +33,7 @@ class AlbumsViewController: UIViewController {
 
         loadViews()
 
-        albumsViewModel?.loadAlbums { [weak self] in
+        albumsViewModel?.loadAlbums(with: AlbumClient.shared) { [weak self] in
             self?.tableView.reloadData()
         }
     }
@@ -95,7 +95,7 @@ extension AlbumsViewController: UITableViewDelegate {
                     return AlbumsTableViewCell()
         }
 
-        albumsViewModel?.configure(cell, for: indexPath)
+        albumsViewModel?.configure(cell, for: indexPath.row, with: ImageClient.shared)
 
         return cell
     }
@@ -106,7 +106,7 @@ extension AlbumsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let albumViewController = AlbumViewController()
-        albumViewController.album = albumsViewModel?.album(for: indexPath)
+        albumViewController.album = albumsViewModel?.album(for: indexPath.row)
         navigationController?.pushViewController(albumViewController, animated: true)
     }
 }

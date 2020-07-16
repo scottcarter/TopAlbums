@@ -29,6 +29,7 @@ class AlbumClientTests: XCTestCase {
 
             XCTAssertNil(error)
 
+            // dataTask method is not throwing, so catch throws
             do {
                 let response = try XCTUnwrap(response as? HTTPURLResponse)
                 XCTAssertEqual(response.statusCode, 200)
@@ -79,11 +80,9 @@ class AlbumClientTests: XCTestCase {
     // Test the AlbumClient with stubbed data
     func test_AlbumClient() throws {
 
-        _ = AlbumClient(
-            albumFeedURL: StubAlbumDataTaskMaker.dummyURL,
-            session: try StubAlbumDataTaskMaker(),
-            responseQueue: nil
-        ).getAlbumFeed { albumFeed, error in
+        let albumClient = try AlbumUtilities.albumClient()
+
+        _ = albumClient.getAlbumFeed { albumFeed, error in
             defer { self.expectation.fulfill() }
 
             XCTAssertEqual(albumFeed?.feed.albums.count, StubAlbumDataTaskMaker.expectedResultCount)

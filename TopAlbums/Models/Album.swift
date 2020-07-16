@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Album: Codable {
+struct Album: Codable, Equatable {
+
     let artistName: String
     let artworkURL: String
     let copyright: String
@@ -25,6 +26,17 @@ struct Album: Codable {
         case name
         case releaseDate
         case albumURL = "url"
+    }
+
+    static func == (lhs: Album, rhs: Album) -> Bool {
+        return
+            lhs.artistName == rhs.artistName &&
+            lhs.artworkURL == rhs.artworkURL &&
+            lhs.copyright == rhs.copyright &&
+            lhs.genres == rhs.genres &&
+            lhs.name == rhs.name &&
+            lhs.releaseDate == rhs.releaseDate &&
+            lhs.albumURL == rhs.albumURL
     }
 
 }

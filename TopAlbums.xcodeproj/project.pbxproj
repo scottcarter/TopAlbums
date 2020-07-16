@@ -29,6 +29,9 @@
 		A7B89C2B24BF57DE003FCCFA /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2924BF57DE003FCCFA /* AlbumView.swift */; };
 		A7B89C2C24BF57DE003FCCFA /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2A24BF57DE003FCCFA /* AlbumViewController.swift */; };
 		A7B89C2E24BF5831003FCCFA /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C2D24BF5831003FCCFA /* AlbumViewModel.swift */; };
+		A7B89C4B24C0A814003FCCFA /* AlbumUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C4824C0A814003FCCFA /* AlbumUtilities.swift */; };
+		A7B89C4C24C0A814003FCCFA /* AlbumViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C4924C0A814003FCCFA /* AlbumViewModelTest.swift */; };
+		A7B89C4D24C0A814003FCCFA /* AlbumsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B89C4A24C0A814003FCCFA /* AlbumsViewModelTests.swift */; };
 		A7B985FD24BF464E00439A9A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */; };
 		A7B9860224BF47CD00439A9A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FE24BF47CD00439A9A /* Album.swift */; };
 		A7B9860324BF47CD00439A9A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B985FF24BF47CD00439A9A /* Feed.swift */; };
@@ -82,6 +85,9 @@
 		A7B89C2924BF57DE003FCCFA /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		A7B89C2A24BF57DE003FCCFA /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		A7B89C2D24BF5831003FCCFA /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		A7B89C4824C0A814003FCCFA /* AlbumUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumUtilities.swift; sourceTree = "<group>"; };
+		A7B89C4924C0A814003FCCFA /* AlbumViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModelTest.swift; sourceTree = "<group>"; };
+		A7B89C4A24C0A814003FCCFA /* AlbumsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewModelTests.swift; sourceTree = "<group>"; };
 		A7B985FC24BF464E00439A9A /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		A7B985FE24BF47CD00439A9A /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A7B985FF24BF47CD00439A9A /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 		A782A1C224BF3F5E008CC1FA /* TopAlbumsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7B89C4824C0A814003FCCFA /* AlbumUtilities.swift */,
+				A7B89C4A24C0A814003FCCFA /* AlbumsViewModelTests.swift */,
+				A7B89C4924C0A814003FCCFA /* AlbumViewModelTest.swift */,
 				A7B89C0C24BF5168003FCCFA /* AlbumClientTests.swift */,
 				A7B89C2124BF546D003FCCFA /* ImageClientTests.swift */,
 				A7B89C1024BF51A3003FCCFA /* InvalidAlbumFeed.swift */,
@@ -418,11 +427,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B89C4C24C0A814003FCCFA /* AlbumViewModelTest.swift in Sources */,
 				A7B89C2224BF546D003FCCFA /* ImageClientTests.swift in Sources */,
+				A7B89C4B24C0A814003FCCFA /* AlbumUtilities.swift in Sources */,
 				A7B89C1524BF51A3003FCCFA /* StubDataTaskMaker.swift in Sources */,
 				A7B89C0D24BF5168003FCCFA /* AlbumClientTests.swift in Sources */,
 				A7B89C1324BF51A3003FCCFA /* InvalidAlbumFeed.swift in Sources */,
 				A7B89C1424BF51A3003FCCFA /* StubAlbumDataTaskMaker.swift in Sources */,
+				A7B89C4D24C0A814003FCCFA /* AlbumsViewModelTests.swift in Sources */,
 				A7B89C2424BF548D003FCCFA /* StubImageDataTaskMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

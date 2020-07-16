@@ -17,12 +17,19 @@ class AlbumsViewModel {
 
     // MARK: - Functions
 
-    func album(for indexPath: IndexPath) -> Album {
-        albums[indexPath.row]
+    func album(for index: Int) -> Album? {
+        albums.count > index ? albums[index] : nil
     }
 
-    func configure(_ cell: AlbumsTableViewCell, for indexPath: IndexPath) {
-        let album = albums[indexPath.row]
+    func configure(
+        _ cell: AlbumsTableViewCell,
+        for index: Int,
+        with imageClient: ImageClient
+    ) {
+
+        guard let album = album(for: index) else {
+            return
+        }
 
         cell.albumName.text = album.name
         cell.albumName.font = UIFont.systemFont(ofSize: 20.0)
@@ -34,7 +41,7 @@ class AlbumsViewModel {
             return
         }
 
-        ImageClient.shared.setImage(
+        imageClient.setImage(
             on: cell.albumArt,
             fromURL: thumbnailURL,
             withPlaceholder: UIImage(systemName: "photo"),
@@ -42,9 +49,11 @@ class AlbumsViewModel {
         )
      }
 
-    func loadAlbums(completion: @escaping () -> Void) {
-
-        _ = AlbumClient.shared.getAlbumFeed { [weak self] albumFeed, error in
+    func loadAlbums(
+        with albumClient: AlbumClient,
+        completion: @escaping () -> Void
+    ) {
+        _ = albumClient.getAlbumFeed { [weak self] albumFeed, error in
 
             guard let self = self else { return }
 
