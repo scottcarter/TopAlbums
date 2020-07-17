@@ -32,6 +32,18 @@ enum Constants {
     enum Album {
         static let albumArtHeight: CGFloat = 200.0 // The size of original
 
+        // For elements used in UI testing, the accessibility identifiers should
+        // all be unique. Consider the case where the Album view controller is pushed onto
+        // the navigation stack.  If a table cell label (such as album name) shared the
+        // same identifier as a label in Album view controller, the UI test would
+        // not be able to distiguish the elements with a simple query from XCUIApplication.
+        //
+        // They also must be constant strings, so UUID().uuidString is not acceptable.
+        // This is because this file is apparently compiled once for the app, and a
+        // a second time for any UI test that includes it.
+        static let albumNameIdentifier = "Album_albumName"
+        static let artistNameIdentifier = "Album_artistName"
+
         // Dark mode support for store button border color variation.
         static let buttonBorderColor = UIColor {(traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
@@ -45,6 +57,9 @@ enum Constants {
     enum AlbumsTable {
         static let rowHeight: CGFloat = 100.0
         static let albumArtHeight: CGFloat = 90.0 // To allow for row separation
+
+        static let albumNameIdentifier = "AlbumsTable_albumName"
+        static let artistNameIdentifier = "AlbumsTable_artistName"
     }
 
 }

@@ -37,6 +37,11 @@ class AlbumsViewModel {
         cell.artistName.text = album.artistName
         cell.artistName.font = UIFont.systemFont(ofSize: 14.0)
 
+        // Add identifiers for UI Testing
+        cell.accessibilityIdentifier = String(index)
+        cell.albumName.accessibilityIdentifier = Constants.AlbumsTable.albumNameIdentifier
+        cell.artistName.accessibilityIdentifier = Constants.AlbumsTable.artistNameIdentifier
+
         guard let thumbnailURL = URL(string: album.artworkURL) else {
             return
         }

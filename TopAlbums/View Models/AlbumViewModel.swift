@@ -37,6 +37,10 @@ class AlbumViewModel {
         view.artistName.text = album.artistName
         view.artistName.font = UIFont.systemFont(ofSize: 14.0)
 
+        // Add identifiers for UI Testing
+        view.albumName.accessibilityIdentifier = Constants.Album.albumNameIdentifier
+        view.artistName.accessibilityIdentifier = Constants.Album.artistNameIdentifier
+
         // There can be multiple genres entries. The first is what we want.
         if let albumGenre = album.genres.first?.name {
             view.genre.text = albumGenre

@@ -2,34 +2,86 @@
 //  TopAlbumsUITests.swift
 //  TopAlbumsUITests
 //
-//  Created by Scott Carter on 7/15/20.
+//  Created by Scott Carter on 7/13/20.
 //  Copyright © 2020 Scott Carter. All rights reserved.
 //
 
 import XCTest
 
+// We need access to Constants.swift, but a UI test cannot access it
+// with an import of TopAlbums.  Instead we include Constants.swift in the
+// target membership of TopAlbumsUITests.
+
 class TopAlbumsUITests: XCTestCase {
 
+    var app: XCUIApplication?
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        app = XCUIApplication()
+        app?.launch()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testNavigation() throws {
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+        let app = try XCTUnwrap(self.app)
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let tableNavBar = app.navigationBars["Top Albums"]
+        let albumPageNavBar = app.navigationBars["TopAlbums.AlbumView"]
+
+        // Start on table view
+        XCTAssertTrue(tableNavBar.exists)
+        XCTAssertFalse(albumPageNavBar.exists)
+
+        // Record the album and artist name from the first cell.
+        // If there are no cells, the test will fail when we attempt to
+        // record first label.
+        let tablesQuery = app.tables
+        let cellQuery = tablesQuery.cells.matching(identifier: "0")
+        let cellElement = cellQuery.element
+
+        let cellAlbumName = tablesQuery
+            .staticTexts
+            .matching(identifier: Constants.AlbumsTable.albumNameIdentifier)
+            .firstMatch
+            .label
+
+        let cellArtistName = tablesQuery
+            .staticTexts
+            .matching(identifier: Constants.AlbumsTable.artistNameIdentifier)
+            .firstMatch
+            .label
+
+        // Tap first cell to visit album page.
+        cellElement.tap()
+
+        XCTAssertFalse(tableNavBar.exists)
+        XCTAssertTrue(albumPageNavBar.exists)
+
+        // Check album and artist name against what was recorded for table cell.
+        XCTAssertEqual(
+            app
+                .staticTexts
+                .matching(identifier: Constants.Album.albumNameIdentifier)
+                .firstMatch
+                .label,
+            cellAlbumName)
+
+        XCTAssertEqual(
+            app
+                .staticTexts
+                .matching(identifier: Constants.Album.artistNameIdentifier)
+                .firstMatch
+                .label,
+            cellArtistName)
+
+        // Tap button to go back to table view
+        albumPageNavBar.buttons["Top Albums"].tap()
+
+        // Finish on table view
+        XCTAssertTrue(tableNavBar.exists)
+        XCTAssertFalse(albumPageNavBar.exists)
+
     }
 
 }
