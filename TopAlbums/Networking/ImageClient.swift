@@ -9,29 +9,15 @@
 import Foundation
 import UIKit
 
-class ImageClient {
+class ImageClient: NetworkingClient {
 
     // MARK: - Constants
-
-    private let responseQueue: DispatchQueue?
-    private let session: DataTaskMaker
 
     static let shared =
         ImageClient(
             session: URLSession.shared,
             responseQueue: .main
     )
-
-    // MARK: - Initializers
-
-    init(
-        session: DataTaskMaker,
-        responseQueue: DispatchQueue?
-    ) {
-
-        self.responseQueue = responseQueue
-        self.session = session
-    }
 
     // MARK: - Functions
 
@@ -81,24 +67,10 @@ private extension ImageClient {
                         return
                 }
 
-                self.dispatchResult(image: image, completion: completion)
+                self.dispatchResult(result: image, completion: completion)
         }
         dataTask.resume()
         return dataTask
-    }
-
-    func dispatchResult(
-        image: UIImage? = nil,
-        error: Error? = nil,
-        completion: @escaping (UIImage?, Error?) -> Void) {
-
-        guard let responseQueue = responseQueue else {
-            completion(image, error)
-            return
-        }
-        responseQueue.async {
-            completion(image, error)
-        }
     }
 
 }

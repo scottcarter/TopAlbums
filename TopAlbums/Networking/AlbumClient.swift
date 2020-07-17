@@ -8,13 +8,11 @@
 
 import Foundation
 
-class AlbumClient {
+class AlbumClient: NetworkingClient {
 
     // MARK: - Constants
 
     private let albumFeedURL: URL?
-    private let responseQueue: DispatchQueue?
-    private let session: DataTaskMaker
 
     static let shared =
         AlbumClient(
@@ -31,8 +29,8 @@ class AlbumClient {
         responseQueue: DispatchQueue?
     ) {
         self.albumFeedURL = albumFeedURL
-        self.session = session
-        self.responseQueue = responseQueue
+
+        super.init(session: session, responseQueue: responseQueue)
     }
 
     // MARK: - Functions
@@ -61,29 +59,12 @@ class AlbumClient {
                 let decoder = JSONDecoder()
                 do {
                     let feed = try decoder.decode(AlbumFeed.self, from: data)
-                    self.dispatchResult(model: feed, completion: completion)
+                    self.dispatchResult(result: feed, completion: completion)
                 } catch {
                     self.dispatchResult(error: error, completion: completion)
                 }
         }
         task.resume()
         return task
-    }
-}
-
-private extension AlbumClient {
-
-    func dispatchResult<Type>(
-        model: Type? = nil,
-        error: Error? = nil,
-        completion: @escaping (Type?, Error?) -> Void
-    ) {
-        guard let responseQueue = responseQueue else {
-            completion(model, error)
-            return
-        }
-        responseQueue.async {
-            completion(model, error)
-        }
     }
 }
