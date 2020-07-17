@@ -6,7 +6,7 @@ Some of the features included in the design:
 - Unit and UI testing (93% code coverage overall)
 - Separate networking clients for albums, images with support for the URLSession dataTask method to be stubbed for testing.
 - Dark mode support (special attention needed for store button border)
-- Use of stack views, manual layout constraints
+- Use of stack views, auto layout constraints
 
 <img src="https://github.com/scottcarter/TopAlbums/blob/master/TopAlbums_2.gif" width="317" height="600" />
 
