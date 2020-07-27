@@ -1,6 +1,8 @@
 # About
 This project was developed as a result of a code exercise.
 
+**Note**: For a SwiftUI/Combine version of this project, please [see the project TopAlbumsSwiftUI](https://github.com/scottcarter/TopAlbumsSwiftUI "see the project TopAlbumsSwiftUI").
+
 Some of the features included in the design:
 - MVVM design pattern
 - Unit and UI testing (93% code coverage overall)
